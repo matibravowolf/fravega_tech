@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "e341c609-97ef-4c7a-a303-b41052dd3fb1",
+		"name": "fravega_tech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43702337",
+		"_collection_link": "https://matias-4676852.postman.co/workspace/Matias's-Workspace~600a11a9-aeb8-43a7-8b31-385ed9920bf6/collection/43702337-e341c609-97ef-4c7a-a303-b41052dd3fb1?action=share&source=collection_link&creator=43702337"
+	},
+	"item": [
+		{
+			"name": "/ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost.:8080/ping",
+					"protocol": "http",
+					"host": [
+						"localhost",
+						""
+					],
+					"port": "8080",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/routes/{route_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/routes/{{route_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"routes",
+						"{{route_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/routes/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle\": \"Mercedez Benz\",\r\n    \"driver\": \"Hernan Cattaneo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/routes/{route_id}/purchases/{purchase_id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/routes/{{route_id}}/purchases/{{purchase_id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"routes",
+						"{{route_id}}",
+						"purchases",
+						"{{purchase_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/routes/{{route_id}}/purchases/{{purchase_id}}/notification",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/routes/{{route_id}}/purchases/{{purchase_id}}/notification",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"routes",
+						"{{route_id}}",
+						"purchases",
+						"{{purchase_id}}",
+						"notification"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "route_id",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "purchase_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
